@@ -1,8 +1,6 @@
 
 # Датафреймы --------------------------------------------------------------
 
-
-
 str(
   list(name = c("Veronika", "Roman", "Sveta", "Julia", "Valentin"),
      age = c(25, 37, 25, 80, 44),
@@ -64,7 +62,6 @@ summary(corpora)
 #> 
 #> The last updated corpus was German Drama Corpus (2024-04-03 10:50:28).
 plot(corpora)
-
 
 # Импорт данных -----------------------------------------------------------
 

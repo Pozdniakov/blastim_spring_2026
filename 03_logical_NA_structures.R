@@ -1,7 +1,6 @@
 
 # Работа с логическими векторами ------------------------------------------
 
-
 eyes <- c("green", "blue", "blue", "brown", "green", "blue")
 sum(eyes == "blue")
 #sum(eyes == "blue")/length(eyes == "blue")
