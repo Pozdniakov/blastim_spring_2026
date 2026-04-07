@@ -75,3 +75,7 @@ heroes <- read.csv("https://raw.githubusercontent.com/Pozdniakov/tidy_stats/refs
                    na.strings = c("-", "-99", " ", "NA"))
 
 ?read.csv
+
+read.table("heroes_information.csv", sep = ",", header = TRUE, 
+           quote = "\"")
+
