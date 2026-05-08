@@ -1,0 +1,87 @@
+---
+title: "Penguins_quarto_2026"
+author: "Ivan Pozdniakov"
+format:
+  html:
+    echo: false
+    message: false
+    warning: false
+editor: visual
+bibliography: references.bib
+---
+
+# Заголовок первого уровня
+
+## Заголовок второго уровня
+
+### Заголовок третьего уровня
+
+#### Заголовок четвертого уровня
+
+##### Заголовок пятого уровня
+
+###### Заголовок шестого уровня
+
+*выделение курсивом*
+
+Можно написать текст в визуальном редакторе, там же *его отредактировать*
+
+~~зачеркнуто~~
+
+**полужирное** **тоже полужирное**
+
+x^2^ x~2~
+
+-   Элемент
+
+-   Списка
+
+    -   подэлемент 1
+
+    -   подэлемент 2
+
+Подэлемент 3
+
+Список закончился.
+
+Почему нельзя [@pozdniakov2021].
+
+Пингвины -- это *нелетающие*[^1] морские **птицы**[@wickham2011] https://ru.wikipedia.org/wiki/Пингвиновые [Википедия про пингвинов](https://ru.wikipedia.org/wiki/Пингвиновые) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Penguins_collage.png/330px-Penguins_collage.png)
+
+[^1]: нелетающие -- это которые не летают
+
+> Я устал\
+> Который год во мне живет нарвал
+
+```{r}
+#| echo: true
+a <- 2 + 2
+```
+
+```{r}
+a ^ 2
+```
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+Дважды два равно `r 2 * 2`
+
+
+```{r}
+penguins <- palmerpenguins::penguins %>% drop_na()
+gg_penguin <- ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species)) +
+  ggsci::scale_color_tron() +
+  hrbrthemes::theme_ipsum()
+gg_penguin
+```
+
+```{r}
+library(plotly)
+ggplotly(gg_penguin)
+```
+
